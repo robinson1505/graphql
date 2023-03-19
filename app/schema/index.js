@@ -1,11 +1,12 @@
-const typeDefs = `#graphql
-  type Book {
-    title: String
-    author: String
+const typeDefs = `
+  type Blog {
+    id:ID
+    name: String
+    description: String
   }
 
   type Query {
-    books: [Book]
+    blogs: [Blog]
   }
 `;
 export default typeDefs
