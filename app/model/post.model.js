@@ -1,5 +1,5 @@
 export default(sequelize,DataTypes) =>{
-  const Post = sequelize.define('Post', {
+  const Post = sequelize.define('post', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -13,7 +13,7 @@ export default(sequelize,DataTypes) =>{
       type: DataTypes.TEXT,
       allowNull: false
     }
-  });
+  },{timestamps: false,freezeTableName: true});
   return Post;
 
 }

@@ -1,5 +1,5 @@
 export default (sequelize, DataTypes) => {
-  const Author = sequelize.define("Author", {
+  const Author = sequelize.define("author", {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -14,6 +14,6 @@ export default (sequelize, DataTypes) => {
       allowNull: false,
       unique: true
     }
-  });
+  },{timestamps: false,freezeTableName: true});
   return Author;
 };

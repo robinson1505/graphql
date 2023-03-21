@@ -1,18 +1,6 @@
-import { BlogModel } from "../model/index.js";
+import authorResolvers from "./author.resolver.js";
+import blogResolvers from "./blog.resolver.js";
+import postResolvers from "./post.resolver.js";
 
-const resolvers = {
-  Query: {
-    blogs: async () => {
-      try {
-        const blogs = await BlogModel.findAll();
-        return blogs;
-      } catch (error) {
-        console.error("Error fetching data: ", error);
-        throw new Error("Error fetching data");
-      }
-    }
-  }
-};
-
-
+const resolvers = [authorResolvers, blogResolvers, postResolvers];
 export default resolvers;

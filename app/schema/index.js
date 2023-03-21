@@ -1,12 +1,8 @@
-const typeDefs = `
-  type Blog {
-    id:ID
-    name: String
-    description: String
-  }
+import author from "./author.schema.js";
+import blog from "./blog.schema.js";
+import post from "./post.schema.js";
+import root from "./root.schema.js";
 
-  type Query {
-    blogs: [Blog]
-  }
-`;
-export default typeDefs
+const typeDefs = [author, blog, post, root];
+
+export default typeDefs;
